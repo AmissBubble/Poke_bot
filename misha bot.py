@@ -5,6 +5,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
+from aiogram import executor
 
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
@@ -65,5 +66,4 @@ async def try_again(message: types.Message, state: FSMContext):
     await GameState.SEARCHING.set()
 
 if __name__ == '__main__':
-    from aiogram import executor
     executor.start_polling(dp, skip_updates=True)
