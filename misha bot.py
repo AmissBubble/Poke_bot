@@ -31,10 +31,6 @@ async def start(message: types.Message):
     await message.answer("Press the 'Go' button to start the adventure.", reply_markup=keyboard)
     await GameState.SEARCHING.set()
 
-# Rest of your code remains unchanged...
-
-
-# Rest of your code remains unchanged...
 
 
 @dp.message_handler(state=GameState.SEARCHING, text='Go')
