@@ -8,11 +8,12 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 
-# Set up logging
+
 logging.basicConfig(level=logging.INFO)
 
-# Replace 'YOUR_BOT_TOKEN' with your actual bot token
-bot = Bot(token='5629818025:AAE3CAZFs6uhMcWZodFUdpKhSJu5awmGK_o')
+token = "6831587612:AAEUQ4m30-Pajetdnw0AwZ4omaNmzVkc-4o"
+
+bot = Bot(token=token)
 dp = Dispatcher(bot, storage=MemoryStorage())
 dp.middleware.setup(LoggingMiddleware())
 
